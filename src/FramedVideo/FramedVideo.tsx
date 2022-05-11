@@ -1,7 +1,8 @@
 import './FramedVideo.module.css';
 import { useRef } from 'react';
+import React from 'react';
 
-function FramedVideo(props) {
+function FramedVideo(props: any) {
     const videoComponent = useRef(null);
     let frameTime = 1/ 25;
 
@@ -13,7 +14,7 @@ function FramedVideo(props) {
       OneFrame(true);
     }
 
-    const OneFrame = (direction) => {
+    const OneFrame = (direction: any) => {
       if (videoComponent.current.paused) { //or you can force it to pause here
         if (direction) { //left arrow
             //one frame back
